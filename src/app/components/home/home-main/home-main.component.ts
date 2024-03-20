@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {GameCardComponent} from "../game-card/game-card.component";
+import { Component, signal } from '@angular/core';
+import { GameCardComponent } from "../game-card/game-card.component";
+import { Random } from '../models/random.model';
 
 @Component({
   selector: 'app-home-main',
@@ -11,7 +12,16 @@ import {GameCardComponent} from "../game-card/game-card.component";
   styleUrl: './home-main.component.css'
 })
 export class HomeMainComponent {
-  doSomething(): void {
+  //#region Properties
+  randomSigVar = signal<Random>({
+    id: '12',
+    name: 'Reza'
+  });
+  //#endregion
 
+  //#region Main logic methods
+  doSomething(): void {
+    console.log('it works!');
   }
+  //#endregion
 }

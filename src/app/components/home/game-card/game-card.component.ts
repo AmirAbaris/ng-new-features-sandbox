@@ -1,4 +1,4 @@
-import {Component, OnInit, output} from '@angular/core';
+import { Component, OnInit, output } from '@angular/core';
 
 @Component({
   selector: 'app-game-card',
@@ -10,14 +10,12 @@ import {Component, OnInit, output} from '@angular/core';
 export class GameCardComponent implements OnInit {
   //region Properties
   gameEvent = output();
-
   //endregion
 
   //region Lifecycle methods
   ngOnInit(): void {
     this.onGamesEventHandler();
   }
-
   //endregion
 
   //region Handler methods
@@ -25,6 +23,5 @@ export class GameCardComponent implements OnInit {
     console.log('new ng signal based output');
     this.gameEvent.emit();
   }
-
   //endregion
 }
